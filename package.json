@@ -1,11 +1,29 @@
 {
   "name": "dataart-dace",
   "version": "0.1.0",
+  "homepage": "https://EvgeniiKolesnikov.github.io/dataart-dace",
   "devDependencies": {
     "sass": "^1.32.8"
   },
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html -d build --public-url=. --no-minify"
+    "build": "parcel build index.html NODE_ENV=production -d build --public-url=/dataart-dace --no-minify",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
