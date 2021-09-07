@@ -1,0 +1,11 @@
+{
+  "name": "dataart-dace",
+  "version": "0.1.0",
+  "devDependencies": {
+    "sass": "^1.32.8"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html -d build --public-url=. --no-minify"
+  }
+}
